@@ -25,6 +25,6 @@
   },
   "homepage": "https://github.com/steave6/frontlab#readme",
   "devDependencies": {
-    "live-server": "^1.2.0"
+    "http-server": "^0.11.1"
   }
 }
