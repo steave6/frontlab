@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.0/vue.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/datejs/1.0/date.min.js" integrity="sha256-xljKCznmrf+eJGt+Yxyo+Z3KHpxlppBZSjyDlutbOh0=" crossorigin="anonymous"></script>
+  <script src="PomodoroTimer.js"></script>
+  <script src="GanntLine.js"></script>
+  <link rel="stylesheet" type="text/css" href="gannt.css" />
+  <link rel="stylesheet" type="text/css" href="pomodoro.css" />
+</head>
+<body>
+<!-- <div style='position:absolute; background: white; opacity: 0.85; width: 100%; height:100%; z-index:9999;'>
+</div> -->
+<div id="app">
+  <div style='width: 25em; height: 25em;'>
+    <pomodoro-timer></pomodoro-timer>
+  </div>
+  <div style='width:40em;height:8em;'>
+    <gannt-line></gannt-line>
+  </div>
+</div>
+<script type="text/javascript">
+new Vue({
+  el: '#app',
+  components: {
+    PomodoroTimer,
+    GanntLine
+  },
+  data: {
+    newTitle: '',
+    list: [
+      { title: 'A', checked: true },
+      { title: 'B', checked: true },
+      { title: 'C', checked: true }
+    ]
+  }
+});
+</script>
+</body>
+</html>

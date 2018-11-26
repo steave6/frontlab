@@ -1,0 +1,172 @@
+/* Transition animation */
+.timerclock-enter-active, .timerclock-leave-active {
+  transition: opacity .3s;
+}
+/* .fade-leave-active below version 2.1.8 */
+.timerclock-enter, .timerclock-leave-to {
+  opacity: 0;
+}
+
+.pomodoro {
+  height: 20em;
+  position: relative;
+  width: 20em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pomodoro-timer {
+}
+
+.pomodoro-clock {
+  border-radius: 50%;
+  background: #fff url(./ios_clock.svg) no-repeat center;
+  background-size: 88%;
+}
+
+/* BELOW is pomodoro TIMER */
+.timer-container {
+  background: greenyellow;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.timer-info-container {
+  position: absolute;
+  background: #ffcc99;
+  width: 70%;
+  height: 40%;
+  left: 15%;
+  top: 35%;
+  margin:0 auto;
+  z-index: 50;
+  text-align: center;
+}
+
+.timer-letters {
+  width: 100%;
+  height: 66%;
+}
+.timer-letter {
+  width: 2em;
+  height: 4em;
+  background: red;
+  position: relative;
+  top: 1em;
+  display: inline-block;
+}
+.timer-delimiter {
+  display: inline-block;
+  position: relative;
+  top: 1em;
+}
+
+.timer-buttons {
+  width: 100%;
+  height: 33%;
+}
+
+.timer-start {
+  display: inline-block;
+}
+.timer-stop {
+  display: inline-block;
+}
+
+/* BELOW is pomodoro CLOCK */
+.clickable-wrapper {
+  opacity: 1;
+  width: 100%;
+  height:100%;
+  position: absolute;
+  z-index: 10;
+}
+
+.load-sign-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  opacity: 0.7;
+  z-index: 999;
+}
+
+.loader{
+  width:100px;
+  height:100px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin:10px 20px;
+  z-index: 1000;
+}
+
+@keyframes load8{
+  100%{
+    transform:rotatez(360deg);
+  }
+}
+.loading-sign::before{
+  content:"";
+  color:white;
+  height:50px;
+  width:50px;
+  background:transparent;
+  border-radius:50%;
+  border:10px solid transparent;
+  border-color:#039BE5 #039BE5 transparent transparent;
+  animation:load8 .6s infinite;
+  z-index: 1000;
+}
+
+
+.minutes-container, .hours-container, .seconds-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.hours {
+  background: #000;
+  height: 20%;
+  left: 48.75%;
+  position: absolute;
+  top: 30%;
+  transform-origin: 50% 100%;
+  width: 2.5%;
+}
+.minutes {
+  background: #000;
+  height: 40%;
+  left: 49%;
+  position: absolute;
+  top: 10%;
+  transform-origin: 50% 100%;
+  width: 2%;
+}
+.seconds {
+  background: #000;
+  height: 45%;
+  left: 49.5%;
+  position: absolute;
+  top: 14%;
+  transform-origin: 50% 80%;
+  width: 1%;
+  z-index: 8;
+}
+
+.hours-container {
+  transition: transform 0.3s cubic-bezier(.4,2.08,.55,.44);
+}
+.minutes-container {
+  transition: transform 0.3s cubic-bezier(.4,2.08,.55,.44);
+}
+.seconds-container {
+  transition: transform 0.2s cubic-bezier(.4,2.08,.55,.44);
+}
