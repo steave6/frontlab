@@ -1,0 +1,37 @@
+[draggable] {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  /* Required to make elements draggable in old WebKit */
+  -khtml-user-drag: element;
+  -webkit-user-drag: element;
+}
+
+
+.todo-textarea {
+  display:inline-block;
+  min-height: 10em;
+  max-height: 25em;
+  font-size: 12px;
+  resize: none;
+}
+
+.todo-each {
+  margin-top: 2px;
+  border-bottom: 1px solid #D3D3D3;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.todo-each span {
+  
+}
+
+.todo-each span:focus {
+  background: #FCE3FA;
+}
+
+.flip-list-move {
+  transition: transform 0.5s;
+}
