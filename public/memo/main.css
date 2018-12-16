@@ -8,17 +8,21 @@
   -webkit-user-drag: element;
 }
 
+#todoTitle {
+  font-size: 1.8em;
+}
 
 .todo-textarea {
   display:inline-block;
   min-height: 10em;
-  max-height: 25em;
+  max-height: 40em;
   resize: none;
   overflow: hidden;
 }
 
 .todo-textarea:hover {
   overflow: auto;
+  resize: vertical;
 }
 
 .todo-each {
